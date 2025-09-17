@@ -1,23 +1,9 @@
-package com.example.expense_tracker.model.entity;
+package com.example.expense_tracker.dto;
 
-import jakarta.persistence.*;
-
-@Entity
-@Table(name = "users")
-public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @Column(nullable = false, unique = true, length = 255)
+public class AuthRequest {
     private String username;
-
-    @Column(nullable = false, unique = true, length = 255)
-    private String email;
-
-    @Column(nullable = false, length = 255)
     private String password;
-
+    private String email;
 
     public String getUsername() {
         return username;
