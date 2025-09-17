@@ -18,7 +18,7 @@ class UserRepositoryTest {
     @Test
     void findByUsername_ShouldReturnEmpty_WhenUserNotFound() {
         Optional<User> result = userRepository.findByUsername("alice");
-        assertThat(result).isPresent();
+        assertThat(result).isNotPresent();
     }
 
 
