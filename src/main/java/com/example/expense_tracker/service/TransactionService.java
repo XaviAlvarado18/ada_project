@@ -44,6 +44,7 @@ public class TransactionService {
     }
 
 
+    // Method for build summay
     private Map<String, Object> buildSummary(List<Transaction> transactions) {
         double totalIncome = transactions.stream()
                 .filter(tx -> "INCOME".equalsIgnoreCase(tx.getType()))
